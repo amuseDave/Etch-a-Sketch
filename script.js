@@ -4,6 +4,7 @@ const canvasEl = document.getElementById("canvas");
 const ctx = canvasEl.getContext("2d");
 
 const canvasSettingsEl = document.getElementById("canvas-settings");
+const clearCanvasBtn = document.getElementById("clear-canvas");
 
 initiateCanvasSettings(ctx);
 
@@ -43,5 +44,11 @@ canvasSettingsEl.addEventListener("input", (e) => {
     ctx.lineWidth = typeof +value === "number" ? +value : ctx.lineWidth;
   } else if (type === "color") {
     ctx.strokeStyle = value;
+  } else if (type === "submit") {
+    console.log(type);
   }
+});
+
+clearCanvasBtn.addEventListener("click", () => {
+  ctx.clearRect(0, 0, 1000, 600);
 });

@@ -51,6 +51,7 @@ body {
 }
 
 .canvas-settings {
+  gap: 12px;
   width: 100%;
   justify-content: start;
   display: flex;
