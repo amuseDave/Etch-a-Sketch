@@ -1,0 +1,49 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(
+    -45deg,
+    #041517,
+    #041517,
+    #041517,
+    #0b2d31,
+    #248e9a,
+    #34ebff53,
+    #248e9a,
+    #0b2d31,
+    #041517,
+    #041517,
+    #041517
+  );
+  background-size: 400%;
+  animation: gradient 30s linear infinite forwards;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: url("./images/paintCursor.png"), default;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 200% 50%;
+  }
+  100% {
+    background-position: 400% 50%;
+  }
+}
+
+#canvas {
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px black;
+  width: 800px;
+  height: 640px;
+  background-color: rgb(228, 228, 228);
+}
