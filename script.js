@@ -34,3 +34,14 @@ canvasEl.addEventListener("mousedown", handleMouseDown);
 canvasEl.addEventListener("mouseleave", handleMouseUp);
 canvasEl.addEventListener("mouseup", handleMouseUp);
 canvasEl.addEventListener("mousemove", handleMouseMove);
+
+// Canvas settings
+
+canvasSettingsEl.addEventListener("input", (e) => {
+  const { value, type } = e.target;
+  if (type === "range") {
+    ctx.lineWidth = typeof +value === "number" ? +value : ctx.lineWidth;
+  } else if (type === "color") {
+    ctx.strokeStyle = value;
+  }
+});

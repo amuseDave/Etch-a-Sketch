@@ -14,7 +14,6 @@ export function getCanvasSizeCSSRatio(canvasEl) {
 }
 
 export function initiateCanvasSettings(ctx) {
-  ctx.strokeStyle = "blue";
   ctx.lineWidth = 15;
   ctx.lineJoin = "round";
   ctx.lineCap = "round";
