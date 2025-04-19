@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="./script.js" defer></script>
+    <script type="module" src="./script.js" defer></script>
   </head>
   <body>
+    <div class="canvas-settings" id="canvas-settings">
+      <input type="range" min="1" max="50" />
+    </div>
     <canvas width="1000" height="800" id="canvas"></canvas>
   </body>
 </html>

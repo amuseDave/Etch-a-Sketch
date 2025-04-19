@@ -1,38 +1,33 @@
+import { drawLine, getCanvasSizeCSSRatio, initiateCanvasSettings } from "./utils.js";
+
 const canvasEl = document.getElementById("canvas");
 const ctx = canvasEl.getContext("2d");
 
-function getCanvasSizeCSS() {
-  const { width, height } = getComputedStyle(canvasEl);
+const canvasSettingsEl = document.getElementById("canvas-settings");
 
-  return {
-    width: 1 / (width.slice(0, -2) / 1000),
-    height: 1 / (height.slice(0, -2) / 800),
-  };
-}
+initiateCanvasSettings(ctx);
 
-const state = { isClicked: false, ...getCanvasSizeCSS() };
-
-console.log(state);
-
-function handleMouseDown(e) {
-  state.isClicked = true;
-  ctx.strokeStyle = "blue";
-  ctx.beginPath();
-  ctx.moveTo(e.offsetX * state.width, e.offsetY * state.height);
-  ctx.stroke;
-}
+const state = { isClicked: false, ...getCanvasSizeCSSRatio(canvasEl) };
 
 function handleMouseUp() {
   state.isClicked = false;
-  ctx.end;
+  ctx.closePath();
+}
+
+function handleMouseDown(e) {
+  const { x, y } = { x: e.offsetX * state.width, y: e.offsetY * state.height };
+
+  state.isClicked = true;
+
+  ctx.beginPath();
+  ctx.moveTo(x, y);
+  drawLine(x, y, ctx);
 }
 
 function handleMouseMove(e) {
   if (!state.isClicked) return;
-  console.log(e.offsetY);
-
-  ctx.lineTo(e.offsetX * state.width, e.offsetY * state.height);
-  ctx.stroke();
+  const { x, y } = { x: e.offsetX * state.width, y: e.offsetY * state.height };
+  drawLine(x, y, ctx);
 }
 
 canvasEl.addEventListener("mousedown", handleMouseDown);

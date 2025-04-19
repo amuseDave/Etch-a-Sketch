@@ -24,6 +24,7 @@ body {
   min-height: 100dvh;
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
   cursor: url("./images/paintCursor.png"), default;
 }
@@ -46,4 +47,8 @@ body {
   width: 800px;
   height: 640px;
   background-color: rgb(228, 228, 228);
+}
+
+.canvas-settings {
+  display: flex;
 }
