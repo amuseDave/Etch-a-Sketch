@@ -119,3 +119,9 @@ window.addEventListener("resize", () => {
   state.width = width;
   state.height = height;
 });
+
+console.log("Hey there!");
+console.log("Thank you for visiting my website!");
+console.log(
+  "If you are developer like me feel free to reach out to connect! @amuseDave2 discord"
+);
