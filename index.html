@@ -10,8 +10,21 @@
   <body>
     <div class="canvas-cont">
       <div class="canvas-settings" id="canvas-settings">
-        <input type="range" min="1" max="50" />
+        <div class="checkbox">
+          <input id="size" type="range" value="10" min="1" max="50" name="range" />
+          <label for="range">Paint Brush Size</label>
+        </div>
+
         <input type="color" />
+        <div class="checkbox" id="checkbox">
+          <input type="checkbox" name="check" id="checkbox-input" />
+          <label for="check">Random Colors</label>
+        </div>
+        <div class="checkbox" id="softness">
+          <input type="checkbox" name="softness" id="softness-input" />
+          <label for="softness">Softness</label>
+        </div>
+
         <button id="clear-canvas">Clear Canvas</button>
       </div>
       <canvas width="1000" height="800" id="canvas"></canvas>
