@@ -4,12 +4,10 @@ export function drawLine(x, y, ctx) {
 }
 
 export function getCanvasSizeCSSRatio(canvasEl) {
-  console.log(canvasEl);
-
   const { width, height } = window.getComputedStyle(canvasEl);
   return {
     width: 1 / (width.slice(0, -2) / 1000),
-    height: 1 / (height.slice(0, -2) / 800),
+    height: 1 / (height.slice(0, -2) / 900),
   };
 }
 

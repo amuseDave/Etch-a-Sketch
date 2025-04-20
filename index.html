@@ -11,11 +11,11 @@
     <div class="canvas-cont">
       <div class="canvas-settings" id="canvas-settings">
         <div class="checkbox">
-          <input id="size" type="range" value="10" min="1" max="50" name="range" />
           <label for="range">Paint Brush Size</label>
+          <input id="size" type="range" value="10" min="1" max="50" name="range" />
         </div>
 
-        <input type="color" />
+        <input type="color" id="color-el" />
         <div class="checkbox" id="checkbox">
           <input type="checkbox" name="check" id="checkbox-input" />
           <label for="check">Random Colors</label>
@@ -27,7 +27,7 @@
 
         <button id="clear-canvas">Clear Canvas</button>
       </div>
-      <canvas width="1000" height="800" id="canvas"></canvas>
+      <canvas width="1000" height="900" id="canvas"></canvas>
     </div>
   </body>
 </html>
