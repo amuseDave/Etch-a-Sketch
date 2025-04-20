@@ -101,7 +101,7 @@ canvasSettingsEl.addEventListener("change", (e) => {
 });
 
 clearCanvasBtn.addEventListener("click", () => {
-  ctx.clearRect(0, 0, 1000, 800);
+  ctx.clearRect(0, 0, 1000, 900);
 });
 
 checkboxEl.addEventListener("click", () => {
