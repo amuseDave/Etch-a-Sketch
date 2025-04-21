@@ -94,7 +94,6 @@ canvasSettingsEl.addEventListener("change", (e) => {
       state.isRandom = checkboxInputEl.checked;
     } else {
       softnessInputEl.checked = !softnessInputEl.checked;
-      state.isRandom = softnessInputEl.checked;
       ctx.globalAlpha = softnessInputEl.checked ? 0.01 : 1;
     }
   }
